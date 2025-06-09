@@ -239,7 +239,7 @@ public class FormularioServiceImpl implements IFormularioService {
 
         formulario.setLatitud(evidencia.getLatitud());
         formulario.setLongitud(evidencia.getLongitud());
-        formulario.setPath_imagen(evidencia.getPathImagen());
+        formulario.setPath_imagen(evidencia.getPath_imagen());
 
         servicioAccesoBaseDatos.save(formulario);
     }
@@ -256,7 +256,7 @@ public class FormularioServiceImpl implements IFormularioService {
         .orElseThrow(() -> new EntidadNoExisteException("Evento no encontrado"));
 
     for (RespuestaDTO respuestaDTO : dto.getRespuestas()) {
-        Pregunta pregunta = servicioAccesoBaseDatos3.findById(respuestaDTO.getIdPregunta())
+        Pregunta pregunta = servicioAccesoBaseDatos3.findById(respuestaDTO.getPregunta_id())
             .orElseThrow(() -> new EntidadNoExisteException("Pregunta no encontrada"));
 
         Respuesta respuesta = new Respuesta();

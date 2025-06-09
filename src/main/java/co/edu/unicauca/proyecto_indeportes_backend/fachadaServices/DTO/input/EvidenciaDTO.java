@@ -8,6 +8,6 @@ import lombok.Setter;
 public class EvidenciaDTO {
     private Float latitud;
     private Float longitud;
-    private String pathImagen;
+    private String path_imagen;
 }
 
