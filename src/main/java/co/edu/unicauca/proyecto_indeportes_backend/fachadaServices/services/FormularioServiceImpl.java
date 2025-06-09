@@ -239,7 +239,7 @@ public class FormularioServiceImpl implements IFormularioService {
 
         formulario.setLatitud(evidencia.getLatitud());
         formulario.setLongitud(evidencia.getLongitud());
-        formulario.setPath_imagen(evidencia.getPathImagen());
+        formulario.setPath_imagen(evidencia.getPath_imagen());
 
         servicioAccesoBaseDatos.save(formulario);
     }
