@@ -9,6 +9,6 @@ import org.springframework.data.repository.query.Param;
 import co.edu.unicauca.proyecto_indeportes_backend.capaAccesoADatos.models.Respuesta;
 
 public interface RespuestaRepository extends JpaRepository<Respuesta, Integer> {
-    @Query(value = "SELECT * FROM Respuestas r WHERE r.id_evento = :idEvento", nativeQuery = true)
+    @Query(value = "SELECT * FROM respuestas r WHERE r.id_evento = :idEvento", nativeQuery = true)
     List<Respuesta> findRespuestasByEventoId(@Param("idEvento") Integer idEvento);
 }

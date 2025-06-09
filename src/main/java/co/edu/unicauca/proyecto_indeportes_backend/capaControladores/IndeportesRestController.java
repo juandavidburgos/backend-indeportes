@@ -40,7 +40,7 @@ import co.edu.unicauca.proyecto_indeportes_backend.seguridad.RequiereRol;
 @RestController
 @RequestMapping("/api")
 @Validated
-@CrossOrigin(origins = { "http://localhost:4200" })
+@CrossOrigin(origins = { "http://localhost:4200", "*" })
 public class IndeportesRestController {
 
 	@Autowired
@@ -189,7 +189,7 @@ public class IndeportesRestController {
 		return objRespuesta;
 	}
 
-	@RequiereRol("Administrador")
+	//@RequiereRol("Administrador")
 	@GetMapping("/excel/{idEvento}")
     public ResponseEntity<InputStreamResource> exportarReporteExcel(@PathVariable Integer idEvento) throws IOException {
         return reporteService.generarExcelReportePorEvento(idEvento);

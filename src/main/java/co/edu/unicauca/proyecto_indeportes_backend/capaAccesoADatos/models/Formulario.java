@@ -25,7 +25,7 @@ import lombok.Setter;
 @NoArgsConstructor
 
 @Entity
-@Table(name = "Formularios")
+@Table(name = "formularios")
 public class Formulario {
     
     @Id

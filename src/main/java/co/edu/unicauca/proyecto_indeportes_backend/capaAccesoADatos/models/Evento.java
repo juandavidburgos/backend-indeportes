@@ -30,7 +30,7 @@ import lombok.Setter;
 @NoArgsConstructor
 
 @Entity
-@Table (name = "Eventos")
+@Table (name = "eventos")
 public class Evento {
     
     @Id

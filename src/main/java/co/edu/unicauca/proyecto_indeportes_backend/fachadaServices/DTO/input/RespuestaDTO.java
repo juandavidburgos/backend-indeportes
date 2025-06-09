@@ -6,6 +6,6 @@ import lombok.Setter;
 @Getter
 @Setter
 public class RespuestaDTO {
-    private Integer idPregunta;
+    private Integer pregunta_id;
     private String contenido;
 }
